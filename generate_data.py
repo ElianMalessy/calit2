@@ -1,7 +1,6 @@
 from sdv.datasets.local import load_csvs
 from sdv.sequential import PARSynthesizer
 from sdv.metadata import Metadata
-import os
 
 def generate_data(cases_dir, metadata_file):
     datasets = load_csvs(
@@ -18,5 +17,4 @@ def generate_data(cases_dir, metadata_file):
     synthesizer.fit(data)
     synthetic_data = synthesizer.sample(num_sequences=10)
     print(synthetic_data)
-    # synthetic_data.sort_values(by='Time (s)', ascending=True, inplace=True)
 

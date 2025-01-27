@@ -16,5 +16,8 @@ metadata_file = os.path.join(metadata_dir, 'cases_metadata.json')
 
 if __name__ == '__main__':
     if args.restart:
+        print("Processing data")
         preprocessing(data_dir, cases_file, metadata_file)
+
+    print("Generating data")
     generate_data(cases_dir, metadata_file)

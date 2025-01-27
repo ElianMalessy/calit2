@@ -13,7 +13,7 @@ import os
 
 def process_data(df, output_file):
     df['Time (s)'] = df['Time (s)'].astype(float)
-    df.drop(columns=['Case_No.', 'TimeN (s)', 'Time_aveN (C)'], inplace=True)
+    df.drop(columns=['Case_No.'], inplace=True)
     df.to_csv(output_file, index=False, encoding='utf-8')
 
     return df
